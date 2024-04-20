@@ -1,13 +1,13 @@
 import React from 'react';
 import { Container, Logo, LogoutBtn } from '../index';
 import { useSelector } from 'react-redux';
-import { Link, Navigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 function Header() {
 
   const authStatus = useSelector((state) => state.auth.status);
-  const navigate = Navigate();
+  const navigate = useNavigate();
   
   const navItems = [
     {
